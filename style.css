@@ -1,0 +1,74 @@
+/* Reset básico */
+body, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Corpo principal */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container principal */
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estilo do cartão */
+.cartao {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteúdo do cartão */
+.cartao__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cartao__categoria {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.cartao__conteudo__pergunta p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.cartao__conteudo__resposta {
+    display: none;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Estilo quando ativo */
+.cartao.active .cartao__conteudo__resposta {
+    display: block;
+}
